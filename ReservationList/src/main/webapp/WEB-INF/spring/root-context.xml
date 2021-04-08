@@ -33,11 +33,14 @@
 	</bean>
 	
 	<!--MyBastis 설정하기(mapper) -->
-	<!-- <mybatis-spring:scan
-		base-package="org.zerock.mapper" /> -->
+	<mybatis-spring:scan
+		base-package="com.mylist.mapper" />
 
 <bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
+	
+	<!-- Service 등록 작업 -->
+	<context:component-scan base-package="com.mylist.service"></context:component-scan>
 </beans>

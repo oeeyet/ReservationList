@@ -25,6 +25,8 @@
 	<!-- mainController.java -->
 	<context:component-scan base-package="com.mylist.controller" />
 	
+
+	
 	
 	
 </beans:beans>

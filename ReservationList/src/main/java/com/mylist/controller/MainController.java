@@ -5,19 +5,35 @@ import java.util.Date;
 
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.mylist.domain.BoardVO;
 import com.mylist.domain.MainDTO;
+import com.mylist.service.BoardService;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Controller
 @Log4j
+@RequestMapping("/*")
+@AllArgsConstructor
 public class MainController {
+	
+	
+
+//	---------------------------------------------------------------------------------------------------
+//	---------------------------------------------------------------------------------------------------
+//	---------------------------------------------------------------------------------------------------
 	
 //	Date표시를 위한 (파라미터를 바인딩할 때 자동 호출)
 	@InitBinder
@@ -49,7 +65,7 @@ public class MainController {
 		
 		return"/test2";
 	}
-	@GetMapping("/")
+//	@GetMapping("/")
 	public String main(MainDTO dto) {
 		
 		log.info("dto : " + dto);
