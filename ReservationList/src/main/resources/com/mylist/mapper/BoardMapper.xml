@@ -12,8 +12,8 @@
 
 	<!-- create(insert)처리 -->
 	<insert id="insert">
-		insert into tbl_board (bno,rname,pno,rcount,rdate)
-		values (seq_board.nextval, #{rname}, #{pno}, #{rcount},#{rdate})
+		insert into tbl_board (bno,tno,rname,pno,rcount,rdate)
+		values (seq_board.nextval, #{tno} #{rname}, #{pno}, #{rcount},#{rdate})
 	</insert>
 
 	<insert id="insertSelectKey">
@@ -22,8 +22,8 @@
 			select seq_board.nextval from dual
 		</selectKey>
 
-		insert into tbl_board (bno,rname,pno,rcount)
-		values (#{bno},#{rname},
+		insert into tbl_board (bno,tno,rname,pno,rcount)
+		values (#{bno},#{tno},#{rname},
 		#{pno}, #{rcount})
 	</insert>
 
@@ -42,6 +42,7 @@
 	<update id="update">
 		update tbl_board
 		set rname = #{rname},
+		tno = #{tno},
 		pno = #{pno},
 		rcount = #{rcount},
 		rdate = #{rdate}

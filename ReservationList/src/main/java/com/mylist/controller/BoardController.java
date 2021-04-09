@@ -1,10 +1,14 @@
 package com.mylist.controller;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +24,12 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 @AllArgsConstructor
 public class BoardController {
+	
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm a");
+		binder.registerCustomEditor(java.util.Date.class, new CustomDateEditor(dateFormat, false));
+	}
 
 	private BoardService service;
 
@@ -34,16 +44,20 @@ public class BoardController {
 		return "main";
 	}
 
+	@GetMapping("/register")
+	public String register() {
+
+		log.info("GET Register");
+		return "register";
+	}
+	
 	@PostMapping("/register")
-	public String register(BoardVO board, RedirectAttributes rttr) {
-
-		log.info("register: " + board);
-
-		service.register(board);
-
-		rttr.addFlashAttribute("result", board.getBno());
-
-		return "redirect:/list";
+	public String registerEdit(BoardVO board) {
+		
+		log.info("Regitser Post!!");
+		log.info(board);
+		
+		return "register";
 	}
 
 	@PostMapping("/modify")

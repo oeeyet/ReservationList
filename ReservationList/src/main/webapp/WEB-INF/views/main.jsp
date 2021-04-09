@@ -27,7 +27,7 @@
 </head>
 
 <body>
-	<jsp:include page="./header.jsp"></jsp:include>
+	<jsp:include page="./board/header.jsp"></jsp:include>
 	<!-- 메인 카드  -->
 	<div class="row row-cols-1 row-cols-md-3 g-4">
 				<c:forEach items="${ boardList }" var="board">
@@ -36,7 +36,7 @@
 					<div class="card-body">
 						<p class="card-text">예약번호 : ${board.bno }</p>
 						<h5 class="card-title">예약자 성함 : ${board.rname}</h5>
-						<p class="card-text">예약 인원 : ${board.rcount }</p>
+						<p class="card-text">테이블 번호 : ${board.tno } / 예약 인원 : ${board.rcount }</p>
 						<p class="card-text">연락처 : ${board.pno }</p>
 					</div>
 					<div class="card-footer">
@@ -47,12 +47,4 @@
 				</c:forEach>
 
 	</div>
-
-</body>
-<!-- Bootstrap JS -->
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-	crossorigin="anonymous"></script>
-
-</html>
+<jsp:include page="./board/footer.jsp"></jsp:include>
