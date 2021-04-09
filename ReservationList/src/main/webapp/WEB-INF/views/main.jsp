@@ -69,38 +69,17 @@
 		<div class="col">
 			<div class="card h-100">
 				<div class="card-body">
-					<p class="card-text">예약번호 : ${mainDTO.bno }</p>
-					<h5 class="card-title">예약자 성함 : ${mainDTO.name}</h5>
-					<p class="card-text">예약 인원 : ${mainDTO.count }</p>
-					<p class="card-text">예약 시간 :</p>
+					<%-- <p class="card-text">예약번호 : ${boardVO.bno }</p> --%>
+					<%-- <h5 class="card-title">예약자 성함 : ${boardVO.rname}</h5>
+					<p class="card-text">예약 인원 : ${boardVO.rcount }</p>
+					<p class="card-text">예약 시간 : ${boardVO.pno }</p> --%>
 				</div>
 				<div class="card-footer">
-					<small class="text-muted">비고 : ${mainDTO.etc}</small>
+					<%-- <small class="text-muted">비고 : ${boardVO.rdate}</small> --%>
 				</div>
 			</div>
 		</div>
-		<div class="col">
-			<div class="card h-100">
-				<div class="card-body">
-					<h5 class="card-title">예약자 성함 :</h5>
-					<p class="card-text">예약 인원 / 코스(or not)</p>
-				</div>
-				<div class="card-footer">
-					<small class="text-muted">비고 :</small>
-				</div>
-			</div>
-		</div>
-		<div class="col">
-			<div class="card h-100">
-				<div class="card-body">
-					<h5 class="card-title">예약자 성함 :</h5>
-					<p class="card-text">예약 인원 / 코스(or not)</p>
-				</div>
-				<div class="card-footer">
-					<small class="text-muted">비고 :</small>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 
 </body>
