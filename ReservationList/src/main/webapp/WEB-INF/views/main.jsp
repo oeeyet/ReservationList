@@ -27,44 +27,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid d-flex justify-content-center">
-			<a class="navbar-brand" href="#"><i class="fa fa-address-book-o"
-				aria-hidden="true"></i> 오늘의 예약</a>
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="#">단골 확인</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">노쇼 확인</a></li>
-					<li class="nav-item"><a class="nav-link p-2 bd-highlight"
-						href="#">로그인</a></li>
-					<li class="nav-item"><a class="nav-link p-2 bd-highlight"
-						href="#">회원가입</a></li>
-
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<br>
-	<!-- add button -->
-	<div class="d-flex bd-highlight mb-3">
-		<div class="me-auto p-2 bd-highlight">
-			<button type="button" class="btn btn-outline-dark m-2">예약 현황</button>
-		</div>
-		<div class="p-2 bd-highlight">
-			<button type="button" class="btn btn-outline-dark m-2">예약 추가</button>
-		</div>
-		<div class="p-2 bd-highlight">
-			<button type="button" class="btn btn-outline-dark m-2">예약 수정</button>
-		</div>
-	</div>
-	<br>
-	<br>
+	<jsp:include page="./header.jsp"></jsp:include>
 	<!-- 메인 카드  -->
 	<div class="row row-cols-1 row-cols-md-3 g-4">
 				<c:forEach items="${ boardList }" var="board">
