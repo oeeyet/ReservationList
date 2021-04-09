@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,20 +67,22 @@
 	<br>
 	<!-- 메인 카드  -->
 	<div class="row row-cols-1 row-cols-md-3 g-4">
+				<c:forEach items="${ boardList }" var="board">
 		<div class="col">
 			<div class="card h-100">
-				<div class="card-body">
-					<%-- <p class="card-text">예약번호 : ${boardVO.bno }</p> --%>
-					<%-- <h5 class="card-title">예약자 성함 : ${boardVO.rname}</h5>
-					<p class="card-text">예약 인원 : ${boardVO.rcount }</p>
-					<p class="card-text">예약 시간 : ${boardVO.pno }</p> --%>
-				</div>
-				<div class="card-footer">
-					<%-- <small class="text-muted">비고 : ${boardVO.rdate}</small> --%>
-				</div>
+					<div class="card-body">
+						<p class="card-text">예약번호 : ${board.bno }</p>
+						<h5 class="card-title">예약자 성함 : ${board.rname}</h5>
+						<p class="card-text">예약 인원 : ${board.rcount }</p>
+						<p class="card-text">연락처 : ${board.pno }</p>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">예약 시간 : ${board.rdate}</small>
+					</div>
 			</div>
 		</div>
-		
+				</c:forEach>
+
 	</div>
 
 </body>

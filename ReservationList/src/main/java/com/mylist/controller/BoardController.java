@@ -1,5 +1,7 @@
 package com.mylist.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,9 +27,9 @@ public class BoardController {
 	public String Main(Model model) {
 
 		log.info("Main 페이지 입니다.");
-		log.info(service.getList());
-
-		//model.addAttribute("boardVO", service.getList());
+		// log.info(service.getList());
+		
+		model.addAttribute("boardList", service.getList());
 		
 		return "main";
 	}

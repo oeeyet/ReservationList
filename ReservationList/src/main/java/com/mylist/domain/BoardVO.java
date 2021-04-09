@@ -14,6 +14,6 @@ public class BoardVO {
 	private Long pno; // not null
 	private Long rcount; // not null
 	
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private Date rdate;
 }
