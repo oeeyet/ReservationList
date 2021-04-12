@@ -1,6 +1,5 @@
 package com.mylist.domain;
 
-//import java.sql.Date;
 
 import java.util.Date;
 
@@ -17,6 +16,6 @@ public class BoardVO {
 	private Long pno; // not null
 	private Long rcount; // not null
 	
-//	@DateTimeFormat(pattern = "MM/dd/yyyy hh:mm a")
+	@DateTimeFormat(pattern = "MM/dd/yyyy")
 	private Date rdate;
 }

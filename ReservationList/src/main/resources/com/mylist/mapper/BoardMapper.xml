@@ -12,8 +12,8 @@
 
 	<!-- create(insert)처리 -->
 	<insert id="insert">
-		insert into tbl_board (bno,tno,rname,pno,rcount,rdate)
-		values (seq_board.nextval, #{tno} #{rname}, #{pno}, #{rcount},#{rdate})
+		insert into tbl_board (bno,tno,rname,pno,rcount)
+		values (seq_board.nextval, #{tno} #{rname}, #{pno}, #{rcount})
 	</insert>
 
 	<insert id="insertSelectKey">

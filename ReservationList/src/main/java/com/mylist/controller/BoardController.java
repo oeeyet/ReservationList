@@ -24,12 +24,12 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 @AllArgsConstructor
 public class BoardController {
-	
-	@InitBinder
-	public void initBinder(WebDataBinder binder) {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm a");
-		binder.registerCustomEditor(java.util.Date.class, new CustomDateEditor(dateFormat, false));
-	}
+//	
+//	@InitBinder
+//	public void initBinder(WebDataBinder binder) {
+//		SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm a");
+//		binder.registerCustomEditor(java.util.Date.class, new CustomDateEditor(dateFormat, false));
+//	}
 
 	private BoardService service;
 
