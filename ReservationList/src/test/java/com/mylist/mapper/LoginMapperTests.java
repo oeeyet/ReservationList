@@ -24,7 +24,7 @@ public class LoginMapperTests {
 		mapper.getList().forEach(login -> log.info(login));
 	}
 	
-	@Test
+//	@Test
 	public void testInsert() {
 		LoginVO login = new LoginVO();
 		login.setEmail("test@email.com");
@@ -37,6 +37,35 @@ public class LoginMapperTests {
 		log.info(login);
 		
 	}
+//	@Test
+	public void testRead() {
+		
+		LoginVO loginVO = mapper.read("test@email.com");
+		
+		log.info(loginVO);
+	}
 	
+//	@Test
+	public void testDelete() {
+		
+		log.info("DELETE COUNT");
+		
+		// 이메일 값이 있는지 확인후 실행!
+		mapper.delete("2@gmail.com");
+	}
 	
+	@Test
+	public void testUpdate() {
+		
+		LoginVO login = new LoginVO();
+		
+		login.setEmail("1@gmail.com");
+		login.setName("수정은지");
+		login.setPw("1234");
+		login.setTitle("수정 식당");
+		
+		mapper.update(login);
+		
+		log.info("UPDATE");
+	}
 }

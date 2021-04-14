@@ -24,9 +24,9 @@
 	select * from tbl_owner where email = #{email} </select>
 
 	<!-- delete 처리 -->
-	<!-- <delete id="delete"> delete from tbl_board where email = #{email} </delete> -->
+	 <delete id="delete"> delete from tbl_owner where email = #{email} </delete>
 
 	<!-- update (수정) 처리 -->
-	<!-- <update id="update"> update tbl_update set name = #{name}, pw = #{pw}, 
-		title = #{titleName} where email = #{email} </update> -->
+	<update id="update"> update tbl_owner set name = #{name}, pw = #{pw}, 
+		title = #{title} where email = #{email} </update>
 </mapper>

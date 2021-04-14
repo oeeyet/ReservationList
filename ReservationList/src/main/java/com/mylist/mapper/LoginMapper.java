@@ -15,9 +15,9 @@ public interface LoginMapper {
 	public LoginVO read(String email);
 	
 //	delete처리
-//	public boolean delete(String email);
+	public void delete(String email);
 	
 	//update 처리
-//	public boolean update(LoginVO login);
+	public void update(LoginVO login);
 
 }
