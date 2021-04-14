@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mylist.mapper.LoginMapper">
+
+	<select id="getList" resultType="com.mylist.domain.LoginVO">
+	  	select * from tbl_owner
+	</select>
+
+	<!-- create(insert)처리 -->
+	<insert id="insert">
+		insert into tbl_owner (email, pw, name, title,
+		titleName)
+		values (#{email}, #{pw}, #{name}, #{title},#{titleName})
+	</insert>
+
+	<!-- <insert id="insertSelectKey"> <selectKey keyProperty="bno" order="BEFORE" 
+		resultType="long"> select seq_board.nextval from dual </selectKey> insert 
+		into tbl_board (bno,tno,rname,pno,rcount) values (#{bno},#{tno},#{rname}, 
+		#{pno}, #{rcount}) </insert> -->
+
+	<!-- read(select)처리 -->
+	<!-- <select id="read" resultType="com.mylist.domain.LoginVO"> select * 
+		from tbl_owner where email = #{email} </select> -->
+
+	<!-- delete 처리 -->
+	<!-- <delete id="delete"> delete from tbl_board where email = #{email} </delete> -->
+
+	<!-- update (수정) 처리 -->
+	<!-- <update id="update"> update tbl_update set name = #{name}, pw = #{pw}, 
+		title = #{titleName} where email = #{email} </update> -->
+</mapper>

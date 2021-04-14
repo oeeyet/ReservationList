@@ -62,14 +62,14 @@ public class BoardServiceTests {
 		log.info(service.get(15L));
 	}
 	
-	@Test
+//	@Test
 	public void testDelete() {
 		
 		//게시물 번호의 존재 여부를 확인하고 테스트 할 것
 		log.info("REMOVE RESULT: " + service.remove(24L));
 	}
 	
-	@Test
+//	@Test
 	public void testUpdate() {
 		
 		BoardVO board = service.get(9L);

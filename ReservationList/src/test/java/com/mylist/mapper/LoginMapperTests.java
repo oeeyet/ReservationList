@@ -1,11 +1,4 @@
-package com.mylist.persistence;
-
-import static org.junit.Assert.fail;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-
-import javax.sql.DataSource;
+package com.mylist.mapper;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,17 +12,13 @@ import lombok.extern.log4j.Log4j;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 @Log4j
-public class JDBCTests {
+public class LoginMapperTests {
 
 	@Setter(onMethod_ = @Autowired)
-	private DataSource dataSource;
-
+	private LoginMapper mapper;
+	
 	@Test
-	public void testconnection() {
-		try (Connection con = dataSource.getConnection()) {
-			log.info(con);
-		} catch (Exception e) {
-			fail(e.getMessage());
-		}
+	public void testGetList() {
+		mapper.getList().forEach(login -> log.info(login));
 	}
 }

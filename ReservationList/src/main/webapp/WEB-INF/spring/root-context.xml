@@ -12,8 +12,10 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- mysql 설정 -->
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+	
 		<property name="driverClassName"
 			value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
+			
 		<property name="jdbcUrl"
 			value="jdbc:log4jdbc:mysql://127.0.0.1:3306/list?characterEncoding=UTF8"></property>
 		<property name="username" value="root"></property>
