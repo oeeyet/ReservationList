@@ -11,6 +11,6 @@ public class LoginVO {
 	private String pw;
 	private String name;
 	private String title;
-	private String titleName;
+	
 
 }

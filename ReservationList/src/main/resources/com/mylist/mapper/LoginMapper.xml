@@ -10,9 +10,8 @@
 
 	<!-- create(insert)처리 -->
 	<insert id="insert">
-		insert into tbl_owner (email, pw, name, title,
-		titleName)
-		values (#{email}, #{pw}, #{name}, #{title},#{titleName})
+		insert into tbl_owner (email, pw, name, title)
+		values (#{email}, #{pw}, #{name}, #{title})
 	</insert>
 
 	<!-- <insert id="insertSelectKey"> <selectKey keyProperty="bno" order="BEFORE" 
@@ -21,8 +20,8 @@
 		#{pno}, #{rcount}) </insert> -->
 
 	<!-- read(select)처리 -->
-	<!-- <select id="read" resultType="com.mylist.domain.LoginVO"> select * 
-		from tbl_owner where email = #{email} </select> -->
+	<select id="read" resultType="com.mylist.domain.LoginVO"> 
+	select * from tbl_owner where email = #{email} </select>
 
 	<!-- delete 처리 -->
 	<!-- <delete id="delete"> delete from tbl_board where email = #{email} </delete> -->
