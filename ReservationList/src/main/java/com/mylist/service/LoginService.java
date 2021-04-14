@@ -10,10 +10,9 @@ public interface LoginService {
 	
 	public LoginVO get(String email);
 	
-//	public boolean modify(BoardVO board);
-//	
-//	public boolean remove(Long bno);
+	public void modify(LoginVO login);
 	
-//	public List<BoardVO> getList();
+	public void remove(String email);
+	
 	public List<LoginVO> getList();
 }

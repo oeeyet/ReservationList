@@ -54,7 +54,7 @@ public class LoginMapperTests {
 		mapper.delete("2@gmail.com");
 	}
 	
-	@Test
+//	@Test
 	public void testUpdate() {
 		
 		LoginVO login = new LoginVO();

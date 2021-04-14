@@ -41,5 +41,19 @@ public class LoginSrivceImpl implements LoginService {
 		return null;
 	}
 
+	@Override
+	public void modify(LoginVO login) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void remove(String email) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
 	
 }
