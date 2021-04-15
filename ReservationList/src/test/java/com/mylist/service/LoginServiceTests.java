@@ -27,11 +27,11 @@ public class LoginServiceTests {
 		log.info(service);
 		assertNotNull(service);
 	}
-	@Test
+//	@Test
 	public void testRegister() {
 		
 		LoginVO login = new LoginVO();
-		login.setEmail("새로운이메일");
+		login.setEmail("더 새로운 이메일");
 		login.setName("새로운 이름");
 		login.setPw("새비밀번호");
 		login.setTitle("새로운 식당이름");
@@ -42,4 +42,38 @@ public class LoginServiceTests {
 
 	}
 	
+//	@Test
+	public void testGetList() {
+		
+		service.getList().forEach(Login -> log.info(Login));
+	}
+	
+//	@Test
+	public void testGet() {
+		
+		log.info(service.get("새로운이메일"));
+	}
+	
+//	@Test
+	public void testDelete() {
+		
+		log.info("remove result :");
+		
+		service.remove("1@gmail.com");
+	}
+	
+//	@Test
+	public void testModify() {
+		
+		LoginVO login = service.get("새로운이메일");
+		
+		if(login == null) {
+			return;
+		}
+		login.setTitle("식당 이름을 변경합니다"); 
+//		여기에다가 set으로 변경하고싶은 데이터값 넣으면 된다!
+		
+		log.info("MODIFY RESULT: ");
+		service.modify(login);
+	}
 }

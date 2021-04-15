@@ -68,4 +68,5 @@ public class LoginMapperTests {
 		
 		log.info("UPDATE");
 	}
+	
 }

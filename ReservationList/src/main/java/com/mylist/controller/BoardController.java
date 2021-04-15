@@ -31,59 +31,59 @@ public class BoardController {
 //		binder.registerCustomEditor(java.util.Date.class, new CustomDateEditor(dateFormat, false));
 //	}
 
-	private BoardService service;
-
-	@GetMapping("")
-	public String Main(Model model) {
-
-		log.info("Main 페이지 입니다.");
-		// log.info(service.getList());
-		
-		model.addAttribute("boardList", service.getList());
-		
-		return "main";
-	}
-
-	@GetMapping("/register")
-	public String register() {
-
-		log.info("GET Register");
-		return "register";
-	}
-	
-	@PostMapping("/register")
-	public String registerEdit(BoardVO board) {
-		
-		log.info("Regitser Post!!");
-		log.info(board);
-		
-		return "register";
-	}
-
-	@PostMapping("/modify")
-	public String modify(BoardVO board, RedirectAttributes rttr) {
-
-		log.info("modify: " + board);
-
-		if (service.modify(board)) {
-			rttr.addFlashAttribute("result", "success");
-
-		}
-
-		return "redirect:/list";
-	}
-
-	@PostMapping("/remove") // 삭제는 반드시 POST!!
-	public String remove(@RequestParam("bno") Long bno, RedirectAttributes rttr) {
-
-		log.info("remove......" + bno);
-
-		if (service.remove(bno)) {
-
-			rttr.addFlashAttribute("result", "success");
-
-		}
-
-		return "redirect:/list";
-	}
+//	private BoardService service;
+//
+//	@GetMapping("")
+//	public String Main(Model model) {
+//
+//		log.info("Main 페이지 입니다.");
+//		// log.info(service.getList());
+//		
+//		model.addAttribute("boardList", service.getList());
+//		
+//		return "main";
+//	}
+//
+//	@GetMapping("/register")
+//	public String register() {
+//
+//		log.info("GET Register");
+//		return "register";
+//	}
+//	
+//	@PostMapping("/register")
+//	public String registerEdit(BoardVO board) {
+//		
+//		log.info("Regitser Post!!");
+//		log.info(board);
+//		
+//		return "register";
+//	}
+//
+//	@PostMapping("/modify")
+//	public String modify(BoardVO board, RedirectAttributes rttr) {
+//
+//		log.info("modify: " + board);
+//
+//		if (service.modify(board)) {
+//			rttr.addFlashAttribute("result", "success");
+//
+//		}
+//
+//		return "redirect:/list";
+//	}
+//
+//	@PostMapping("/remove") // 삭제는 반드시 POST!!
+//	public String remove(@RequestParam("bno") Long bno, RedirectAttributes rttr) {
+//
+//		log.info("remove......" + bno);
+//
+//		if (service.remove(bno)) {
+//
+//			rttr.addFlashAttribute("result", "success");
+//
+//		}
+//
+//		return "redirect:/list";
+//	}
 }

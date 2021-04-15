@@ -31,25 +31,33 @@ public class LoginSrivceImpl implements LoginService {
 
 	@Override
 	public LoginVO get(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		log.info("get....." + email);
+		
+		return mapper.read(email);
 	}
 
 	@Override
 	public List<LoginVO> getList() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		log.info("getList....>!!!!!!....");
+		
+		return mapper.getList();
 	}
 
 	@Override
 	public void modify(LoginVO login) {
-		// TODO Auto-generated method stub
+		
+		mapper.update(login);
+		log.info("modify....!>!>!..." + login);
+		
 		
 	}
 
 	@Override
 	public void remove(String email) {
-		// TODO Auto-generated method stub
+		mapper.delete(email);
+		log.info("remove...>!>!>!>!>!" + email);
 		
 	}
 	
