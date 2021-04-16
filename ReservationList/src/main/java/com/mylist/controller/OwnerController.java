@@ -22,12 +22,12 @@ public class OwnerController {
 	
 	private LoginService service;
 	
-	@GetMapping("/list")
+	@GetMapping("/main")
 	public void list(Model model) {
 		
-		log.info("list");
+		log.info("main");
 		
-		model.addAttribute("list", service.getList());
+		model.addAttribute("main", service.getList());
 	}
 	
 	@PostMapping("/register")

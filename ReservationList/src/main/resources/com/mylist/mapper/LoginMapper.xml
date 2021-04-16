@@ -14,6 +14,9 @@
 		values (#{email}, #{pw}, #{name}, #{title})
 	</insert>
 
+<select id="gettitle" resultType="com.mylist.domain.LoginVO">
+select * from tbl_owner where title = #{title}
+</select>
 	<!-- <insert id="insertSelectKey"> <selectKey keyProperty="bno" order="BEFORE" 
 		resultType="long"> select seq_board.nextval from dual </selectKey> insert 
 		into tbl_board (bno,tno,rname,pno,rcount) values (#{bno},#{tno},#{rname}, 
