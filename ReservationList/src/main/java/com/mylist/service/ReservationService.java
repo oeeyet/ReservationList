@@ -10,6 +10,7 @@ public interface ReservationService {
 	
 	public ReservationVO get(Long rno);
 	
+	
 	public boolean modify(ReservationVO reservation);
 	
 	public boolean remove(Long rno);

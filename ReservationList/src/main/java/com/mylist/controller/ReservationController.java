@@ -3,6 +3,7 @@ package com.mylist.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -41,6 +42,11 @@ public class ReservationController {
 		
 		return "redirect:/board/list";
 	}
+	
+	@GetMapping("/register")
+	public void register(@ModelAttribute("title") String title, Model model) {
+		log.info("/register");
+	} // 게시물 등록작업은 POST처리지만, 화면 입력을 받아야 하므로!GET방식 입력페이지 볼 수 있게 추가한 것 !
 	
 	@GetMapping("/get")
 	public void get(@RequestParam("rno") Long rno, Model model) {

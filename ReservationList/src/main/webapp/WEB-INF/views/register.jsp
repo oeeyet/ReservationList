@@ -6,7 +6,7 @@
 
 <body>
 	<!-- 추가입력폼 -->
-	<form action="/register" role="form" method="POST">
+	<form action="/reservation/register" role="form" method="POST">
 		<div class="d-flex justify-content-center">
 			<div class="mb-3">
 				<!-- 예약자 이름 -->
