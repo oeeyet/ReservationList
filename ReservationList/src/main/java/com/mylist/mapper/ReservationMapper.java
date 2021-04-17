@@ -12,4 +12,12 @@ public interface ReservationMapper {
 	
 //	public void insertSelectKey(ReservationVO reservation);
 	
+	// read(select)처리 
+	public ReservationVO read(Long rno);
+	
+	//delete 처리
+	public int delete(Long rno);
+	
+	public int update(ReservationVO reservation);
+	
 }

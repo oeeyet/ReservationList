@@ -11,9 +11,29 @@
   ]]>
 	</select>
 	<insert id="insert">
-		insert into tbl_r (title, rname, rcount, rdate) values (#{title}, #{rname},
+		insert into tbl_r (title, rname, rcount, rdate)
+		values (#{title}, #{rname},
 		#{rcount} ,sysdate())
 	</insert>
+
+	<select id="read" resultType="com.mylist.domain.ReservationVO">
+		select * from tbl_r where rno =
+		#{rno}
+	</select>
+
+	<select id="delete">
+		delete from tbl_r where rno = #{rno}
+	</select>
+	
+	<select id="update">
+	update tbl_r set
+	title = #{title},
+	rname = #{rname},
+	rcount = #{rcount},
+	rdate = sysdate()
+	where rno = #{rno}
+	</select>
+
 
 
 </mapper>
