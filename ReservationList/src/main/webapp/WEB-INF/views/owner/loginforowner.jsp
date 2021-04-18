@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
 <%@include file="../includes/header.jsp"%>
 
 <!-- sign Up Form -->
@@ -53,30 +58,4 @@
 </div>
 
 
-<!-- footer 제작 -->
-<footer
-	class="bd-footer p-3 p-md-1 mt-5 bg-light text-center text-sm-start">
-	<div class="card mb">
-		<div class="row g">
-			<div class="col-md">
-				<i class="fa fa-quote-right fa-5x fa-pull-right fa-border"
-					aria-hidden="true"></i> <i
-					class="fa fa-quote-left fa-5x fa-pull-left fa-border"
-					aria-hidden="true"></i>
-				<div class="card-body justify-content-center">
-					<a href="" class="card-title">Context</a>
-					<p class="card-text">
-						made by EUNJI OH<br>
-					</p>
-					<p class="card-text">
-						<small class="text-muted">To connection all around the
-							world with RESERVATION</small>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-</body>
-
-</html>
+<jsp:include page="../includes/footer.jsp"></jsp:include>

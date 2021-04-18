@@ -16,18 +16,18 @@ import lombok.extern.log4j.Log4j;
 
 @Controller
 @Log4j
-@RequestMapping("")
+@RequestMapping("/owner/*")
 @AllArgsConstructor
 public class OwnerController {
 	
 	private LoginService service;
 	
-	@GetMapping("/main")
+	@GetMapping("/reservationlist")
 	public void list(Model model) {
 		
-		log.info("main");
+		log.info("reservationlist");
 		
-		model.addAttribute("main", service.getList());
+		model.addAttribute("reservationlist", service.getList());
 	}
 	
 	@PostMapping("/register")
@@ -39,7 +39,7 @@ public class OwnerController {
 		
 		rttr.addFlashAttribute("result", login.getEmail());
 		
-		return "redirect:/list";
+		return "redirect:/";
 	}
 	
 	@GetMapping("/get")
@@ -48,6 +48,9 @@ public class OwnerController {
 		model.addAttribute("login", service.get(email));
 
 	}
+	
+
+	
 	@PostMapping("/modify")
 	public String modify(LoginVO login, RedirectAttributes rttr) {
 		

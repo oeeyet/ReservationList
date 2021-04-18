@@ -32,15 +32,17 @@ public class ReservationController {
 	}
 	
 	@PostMapping("/register")
-	public String register(ReservationVO re, RedirectAttributes rttr) {
+	public String register(Model model, ReservationVO re, RedirectAttributes rttr) {
 		
 		log.info("register: " + re);
 		
 		service.register(re);
 		
+		model.addAttribute("result", service.getList());
+		
 		rttr.addFlashAttribute("result", re.getRno());
 		
-		return "redirect:/board/list";
+		return "/owner/reservationlist";
 	}
 	
 	@GetMapping("/register")
