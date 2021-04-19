@@ -23,12 +23,12 @@ public class ReservationController {
 	
 	private ReservationService service;
 	
-	@GetMapping("/list")
+	@GetMapping("/reservationlist")
 	public void list(Model model) {
 		
-		log.info("list");
+		log.info("rlist");
 		
-		model.addAttribute("list", service.getList());
+		model.addAttribute("rlist", service.getList());
 	}
 	
 	@PostMapping("/register")

@@ -2,6 +2,8 @@ package com.mylist.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.mylist.domain.LoginVO;
 
 public interface LoginMapper {
@@ -19,5 +21,9 @@ public interface LoginMapper {
 	
 	//update 처리
 	public void update(LoginVO login);
+	
+	// 로그인 처리
+	public void login(@Param("email")String email, @Param("pw")String pw);
+	
 
 }

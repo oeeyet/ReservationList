@@ -5,31 +5,39 @@
 <mapper namespace="com.mylist.mapper.LoginMapper">
 
 	<select id="getList" resultType="com.mylist.domain.LoginVO">
-	  	select * from tbl_owner
+		select * from tbl_owner
 	</select>
 
 	<!-- create(insert)처리 -->
 	<insert id="insert">
 		insert into tbl_owner (email, pw, name, title)
-		values (#{email}, #{pw}, #{name}, #{title})
+		values
+		(#{email}, #{pw}, #{name}, #{title})
 	</insert>
 
-<select id="gettitle" resultType="com.mylist.domain.LoginVO">
-select * from tbl_owner where title = #{title}
-</select>
+	<select id="gettitle" resultType="com.mylist.domain.LoginVO">
+		select * from tbl_owner where title = #{title}
+	</select>
 	<!-- <insert id="insertSelectKey"> <selectKey keyProperty="bno" order="BEFORE" 
 		resultType="long"> select seq_board.nextval from dual </selectKey> insert 
 		into tbl_board (bno,tno,rname,pno,rcount) values (#{bno},#{tno},#{rname}, 
 		#{pno}, #{rcount}) </insert> -->
 
 	<!-- read(select)처리 -->
-	<select id="read" resultType="com.mylist.domain.LoginVO"> 
-	select * from tbl_owner where email = #{email} </select>
+	<select id="read" resultType="com.mylist.domain.LoginVO">
+		select * from tbl_owner where email = #{email}
+	</select>
+
+	<select id="login" resultType="com.mylist.domain.LoginVO">
+		select email, pw from tbl_owner where email = #{email}
+	</select>
 
 	<!-- delete 처리 -->
-	 <delete id="delete"> delete from tbl_owner where email = #{email} </delete>
+	<delete id="delete"> delete from tbl_owner where email = #{email}
+	</delete>
 
 	<!-- update (수정) 처리 -->
-	<update id="update"> update tbl_owner set name = #{name}, pw = #{pw}, 
-		title = #{title} where email = #{email} </update>
+	<update id="update"> update tbl_owner set name = #{name}, pw = #{pw},
+		title = #{title} where email = #{email}
+	</update>
 </mapper>

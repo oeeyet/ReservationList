@@ -12,7 +12,7 @@
 	<div class="d-flex justify-content-center">
 		<div class="mb-3">
 			<!-- 예약 가게 -->
-			<label for="formGroupExampleInput" class="form-label">
+			<label for="formGroupExampleInput" name="title" class="form-label">
 				${title} </label>
 			<!-- <input type="text" name="rname" 
 					id="formGroupExampleInput " class="form-control mb-3"> -->
@@ -20,18 +20,6 @@
 			<label for="formGroupExampleInput" class="form-label"></label> <input
 				type="text" name="rname" class="form-control mb-3"
 				id="formGroupExampleInput" placeholder="예약자 성함">
-			<!-- 테이블 번호 -->
-			<!-- <select class="form-select mb-3" aria-label="Default select example" name="rno">
-				<option selected>테이블 번호</option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="3">4</option>
-				<option value="3">5</option>
-				<option value="3">6</option>
-				<option value="3">7</option>
-				<option value="3">8</option>
-			</select> -->
 			<!-- 예약 인원 -->
 			<select class="form-select mb-3" aria-label="Default select example"
 				name="rcount">

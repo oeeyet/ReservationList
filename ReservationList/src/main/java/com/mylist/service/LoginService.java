@@ -15,4 +15,6 @@ public interface LoginService {
 	public void remove(String email);
 	
 	public List<LoginVO> getList();
+	
+	public void login(String email, String pw);
 }

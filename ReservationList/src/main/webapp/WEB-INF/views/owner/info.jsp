@@ -7,23 +7,23 @@
 
 <!-- sign Up Form -->
 <div class="container justify-content-center">
-	<form>
+	<!-- <form role="form" action="/owner/modify" method="POST"> -->
 		<div class="row mb-3">
-			<label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+			<label for="inputEmail3" class="col-sm-2 col-form-label">${login.name }</label>
 			<div class="col-sm-10">
-				<input type="email" class="form-control" id="inputEmail3">
+				<input type="text" name="name"  class="form-control" id="inputEmail3">
 			</div>
 		</div>
 		<div class="row mb-3">
-			<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+			<label for="inputEmail3" class="col-sm-2 col-form-label">${login.email }</label>
 			<div class="col-sm-10">
-				<input type="email" class="form-control" id="inputEmail3">
+				<input type="email" name="email" value="" class="form-control" id="inputEmail3">
 			</div>
 		</div>
 		<div class="row mb-3">
-			<label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+			<label for="inputPassword3" class="col-sm-2 col-form-label">${login.pw }</label>
 			<div class="col-sm-10">
-				<input type="password" class="form-control" id="inputPassword3">
+				<input type="password" name="pw" value="" class="form-control" id="inputPassword3">
 			</div>
 		</div>
 		<!-- <div class="d-flex justify-content-center">
@@ -44,17 +44,17 @@
 			</select>
 			<div class="row g-3">
 				<div class="mb-3">
-					<label for="formGroupExampleInput" class="form-label"></label> <input
+					<label for="formGroupExampleInput" class="form-label"></label> ${login.title }<input
 						type="text" class="form-control" id="formGroupExampleInput"
-						placeholder="식당 이름">
+						placeholder="식당 이름" name="title" value="">
 				</div>
 			</div>
 		</div>
 		<br>
 		<div class="d-flex justify-content-center">
-			<button type="submit" class="btn btn-dark">Sign Up</button>
+			<button type="submit" class="btn btn-dark">버튼 뭘로할지 생각해보기 </button>
 		</div>
-	</form>
+	<!-- </form> -->
 </div>
 
 

@@ -7,15 +7,15 @@
 
 <!-- 메인 카드  -->
 <div class="row row-cols-1 row-cols-md-3 g-4">
-  <c:forEach items="${ list }" var="re">
+  <c:forEach items="${ rlist }" var="reservation">
     <div class="col">
       <div class="card h-100">
         <div class="card-body">
-          <p class="card-text">예약 가능 식당 : ${re.title }
+          <p class="card-text">예약 가능 식당 : ${reservation.title }
             <div class="d-flex bd-highlight">
               <div class="me-auto p-2 bd-highlight">
                 <button type="button" class="btn btn-outline-dark "
-                  onclick="location.href='register?title=${re.title}'">예약하기</button>
+                  onclick="location.href='register?title=${reservation.title}'">예약하기</button>
               </div>
             </div>
           </p>

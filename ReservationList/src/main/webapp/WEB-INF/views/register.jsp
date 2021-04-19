@@ -4,7 +4,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <jsp:include page="./includes/header.jsp"></jsp:include>
 
-<body>
 	<!-- 추가입력폼 -->
 	<form action="/reservation/register" role="form" method="POST">
 		<div class="d-flex justify-content-center">
@@ -14,7 +13,7 @@
 					type="text" name="rname" class="form-control mb-3"
 					id="formGroupExampleInput" placeholder="예약자 성함">
 				<!-- 테이블 번호 -->
-				<select class="form-select mb-3" aria-label="Default select example"
+				<!-- <select class="form-select mb-3" aria-label="Default select example"
 					name="tno">
 					<option selected>테이블 번호</option>
 					<option value="1">1</option>
@@ -25,7 +24,7 @@
 					<option value="3">6</option>
 					<option value="3">7</option>
 					<option value="3">8</option>
-				</select>
+				</select> -->
 				<!-- 예약 인원 -->
 				<select class="form-select mb-3" aria-label="Default select example"
 					name="rcount">
